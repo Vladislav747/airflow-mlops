@@ -1,0 +1,52 @@
+[2025-09-25T18:48:43.836+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T18:48:43.843+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.collect_metrics_model manual__2025-09-25T18:43:19.990606+00:00 [queued]>
+[2025-09-25T18:48:43.846+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.collect_metrics_model manual__2025-09-25T18:43:19.990606+00:00 [queued]>
+[2025-09-25T18:48:43.846+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-09-25T18:48:43.851+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): collect_metrics_model> on 2025-09-25 18:43:19.990606+00:00
+[2025-09-25T18:48:43.854+0000] {standard_task_runner.py:64} INFO - Started process 57564 to run task
+[2025-09-25T18:48:43.855+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'collect_metrics_model', 'manual__2025-09-25T18:43:19.990606+00:00', '--job-id', '97', '--raw', '--subdir', 'DAGS_FOLDER/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py', '--cfg-path', '/tmp/tmpxpr62mcy']
+[2025-09-25T18:48:43.856+0000] {standard_task_runner.py:91} INFO - Job 97: Subtask collect_metrics_model
+[2025-09-25T18:48:43.872+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.collect_metrics_model manual__2025-09-25T18:43:19.990606+00:00 [running]> on host 2b301b74205f
+[2025-09-25T18:48:43.907+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='collect_metrics_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T18:43:19.990606+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T18:43:19.990606+00:00'
+[2025-09-25T18:48:43.908+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T18:48:43.913+0000] {logging_mixin.py:188} INFO - collect_metrics_model
+[2025-09-25T18:48:43.914+0000] {kudryakov_hw1-checkpoint.py:197} INFO - Начали расчет метрик
+[2025-09-25T18:48:43.921+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2025-09-25T18:48:43.921+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2025-09-25T18:48:47.272+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T18:48:47.274+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py", line 205, in collect_metrics_model
+    y_pred = s3_read_csv(s3_hook, S3_BUCKET, "2025/processed_data/titanic/titanic_y_pred.csv")
+  File "/opt/airflow/dags/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py", line 40, in s3_read_csv
+    hook.get_conn().download_fileobj(bucket, key, buf)
+  File "/home/airflow/.local/lib/python3.10/site-packages/boto3/s3/inject.py", line 801, in download_fileobj
+    return future.result()
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/futures.py", line 103, in result
+    return self._coordinator.result()
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/futures.py", line 266, in result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/tasks.py", line 269, in _main
+    self._submit(transfer_future=transfer_future, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/download.py", line 354, in _submit
+    response = client.head_object(
+  File "/home/airflow/.local/lib/python3.10/site-packages/botocore/client.py", line 565, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/botocore/client.py", line 1021, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (404) when calling the HeadObject operation: Not Found
+[2025-09-25T18:48:47.284+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=hw1, task_id=collect_metrics_model, run_id=manual__2025-09-25T18:43:19.990606+00:00, execution_date=20250925T184319, start_date=20250925T184843, end_date=20250925T184847
+[2025-09-25T18:48:47.292+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 97 for task collect_metrics_model (An error occurred (404) when calling the HeadObject operation: Not Found; 57564)
+[2025-09-25T18:48:47.335+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-09-25T18:48:47.351+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T18:48:47.352+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

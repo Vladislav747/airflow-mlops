@@ -1,0 +1,22 @@
+[2025-09-25T16:03:12.150+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T16:03:12.159+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.init_pipeline manual__2025-09-25T16:03:10.148012+00:00 [queued]>
+[2025-09-25T16:03:12.162+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.init_pipeline manual__2025-09-25T16:03:10.148012+00:00 [queued]>
+[2025-09-25T16:03:12.162+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-25T16:03:12.168+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): init_pipeline> on 2025-09-25 16:03:10.148012+00:00
+[2025-09-25T16:03:12.172+0000] {standard_task_runner.py:64} INFO - Started process 35356 to run task
+[2025-09-25T16:03:12.174+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'init_pipeline', 'manual__2025-09-25T16:03:10.148012+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py', '--cfg-path', '/tmp/tmpr_bzqhgz']
+[2025-09-25T16:03:12.175+0000] {standard_task_runner.py:91} INFO - Job 15: Subtask init_pipeline
+[2025-09-25T16:03:12.212+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.init_pipeline manual__2025-09-25T16:03:10.148012+00:00 [running]> on host 2b301b74205f
+[2025-09-25T16:03:12.254+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='init_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T16:03:10.148012+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T16:03:10.148012+00:00'
+[2025-09-25T16:03:12.254+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T16:03:12.261+0000] {kudryakov_hw1-checkpoint.py:55} INFO - Запуск пайплайна: 2025-09-25T16:03:12.261306
+[2025-09-25T16:03:12.266+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-09-25T16:03:12.266+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T16:03:12.270+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hw1, task_id=init_pipeline, run_id=manual__2025-09-25T16:03:10.148012+00:00, execution_date=20250925T160310, start_date=20250925T160312, end_date=20250925T160312
+[2025-09-25T16:03:12.313+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-09-25T16:03:12.321+0000] {dagrun.py:940} ERROR - Failed to get task for ti <TaskInstance: hw1.split_and_preprocess manual__2025-09-25T16:03:10.148012+00:00 [up_for_retry]>. Marking it as removed.
+[2025-09-25T16:03:12.322+0000] {dagrun.py:940} ERROR - Failed to get task for ti <TaskInstance: hw1.train_model manual__2025-09-25T16:03:10.148012+00:00 [up_for_retry]>. Marking it as removed.
+[2025-09-25T16:03:12.323+0000] {dagrun.py:940} ERROR - Failed to get task for ti <TaskInstance: hw1.collect_metrics_model manual__2025-09-25T16:03:10.148012+00:00 [up_for_retry]>. Marking it as removed.
+[2025-09-25T16:03:12.323+0000] {dagrun.py:940} ERROR - Failed to get task for ti <TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T16:03:10.148012+00:00 [up_for_retry]>. Marking it as removed.
+[2025-09-25T16:03:12.325+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T16:03:12.325+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

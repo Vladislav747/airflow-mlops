@@ -1,0 +1,22 @@
+[2025-09-25T20:10:43.480+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T20:10:43.486+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.train_model manual__2025-09-25T20:10:33.235900+00:00 [queued]>
+[2025-09-25T20:10:43.490+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.train_model manual__2025-09-25T20:10:33.235900+00:00 [queued]>
+[2025-09-25T20:10:43.490+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-25T20:10:43.494+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_model> on 2025-09-25 20:10:33.235900+00:00
+[2025-09-25T20:10:43.498+0000] {standard_task_runner.py:64} INFO - Started process 69180 to run task
+[2025-09-25T20:10:43.500+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'train_model', 'manual__2025-09-25T20:10:33.235900+00:00', '--job-id', '150', '--raw', '--subdir', 'DAGS_FOLDER/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py', '--cfg-path', '/tmp/tmp272al3pj']
+[2025-09-25T20:10:43.501+0000] {standard_task_runner.py:91} INFO - Job 150: Subtask train_model
+[2025-09-25T20:10:43.520+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.train_model manual__2025-09-25T20:10:33.235900+00:00 [running]> on host 2b301b74205f
+[2025-09-25T20:10:43.556+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T20:10:33.235900+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T20:10:33.235900+00:00'
+[2025-09-25T20:10:43.557+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T20:10:43.563+0000] {kudryakov_hw1-checkpoint.py:165} INFO - Начали обучение модели start-ts 2025-09-25T20:10:43.562985
+[2025-09-25T20:10:43.567+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2025-09-25T20:10:43.568+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2025-09-25T20:10:47.734+0000] {kudryakov_hw1-checkpoint.py:182} INFO - Закончили обучение модели end-ts 2025-09-25T20:10:47.734479
+[2025-09-25T20:10:48.553+0000] {kudryakov_hw1-checkpoint.py:196} INFO - Успешно загрузили модель
+[2025-09-25T20:10:48.558+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-09-25T20:10:48.560+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T20:10:48.573+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hw1, task_id=train_model, run_id=manual__2025-09-25T20:10:33.235900+00:00, execution_date=20250925T201033, start_date=20250925T201043, end_date=20250925T201048
+[2025-09-25T20:10:48.594+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-09-25T20:10:48.613+0000] {taskinstance.py:3503} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T20:10:48.613+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

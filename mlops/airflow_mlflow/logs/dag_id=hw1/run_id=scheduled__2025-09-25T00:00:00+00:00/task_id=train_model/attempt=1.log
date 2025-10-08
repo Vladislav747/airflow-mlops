@@ -1,0 +1,60 @@
+[2025-09-26T00:32:19.886+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-26T00:32:19.891+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.train_model scheduled__2025-09-25T00:00:00+00:00 [queued]>
+[2025-09-26T00:32:19.894+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.train_model scheduled__2025-09-25T00:00:00+00:00 [queued]>
+[2025-09-26T00:32:19.894+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-26T00:32:19.898+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_model> on 2025-09-25 00:00:00+00:00
+[2025-09-26T00:32:19.902+0000] {standard_task_runner.py:64} INFO - Started process 99365 to run task
+[2025-09-26T00:32:19.903+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'train_model', 'scheduled__2025-09-25T00:00:00+00:00', '--job-id', '229', '--raw', '--subdir', 'DAGS_FOLDER/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py', '--cfg-path', '/tmp/tmp4njdk901']
+[2025-09-26T00:32:19.904+0000] {standard_task_runner.py:91} INFO - Job 229: Subtask train_model
+[2025-09-26T00:32:19.922+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.train_model scheduled__2025-09-25T00:00:00+00:00 [running]> on host 2b301b74205f
+[2025-09-26T00:32:19.953+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-25T00:00:00+00:00'
+[2025-09-26T00:32:19.953+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-26T00:32:19.962+0000] {kudryakov_hw1-checkpoint.py:170} INFO - Начали обучение модели start-ts 2025-09-26T00:32:19.958010
+[2025-09-26T00:32:19.965+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2025-09-26T00:32:19.965+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2025-09-26T00:32:32.777+0000] {kudryakov_hw1-checkpoint.py:187} INFO - Закончили обучение модели end-ts 2025-09-26T00:32:32.777105
+[2025-09-26T01:05:05.049+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-26T01:05:05.054+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py", line 193, in train_model
+    s3_hook.load_file_obj(
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 158, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 132, in wrapper
+    return func(*bound_args.args, **bound_args.kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 1234, in load_file_obj
+    self._upload_file_obj(file_obj, key, bucket_name, replace, encrypt, acl_policy)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/providers/amazon/aws/hooks/s3.py", line 1255, in _upload_file_obj
+    client.upload_fileobj(
+  File "/home/airflow/.local/lib/python3.10/site-packages/boto3/s3/inject.py", line 642, in upload_fileobj
+    return future.result()
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/futures.py", line 103, in result
+    return self._coordinator.result()
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/futures.py", line 266, in result
+    raise self._exception
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/tasks.py", line 139, in __call__
+    return self._execute_main(kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/tasks.py", line 162, in _execute_main
+    return_value = self._main(**kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/s3transfer/upload.py", line 764, in _main
+    client.put_object(Bucket=bucket, Key=key, Body=body, **extra_args)
+  File "/home/airflow/.local/lib/python3.10/site-packages/botocore/client.py", line 565, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/botocore/client.py", line 1021, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.exceptions.ClientError: An error occurred (RequestTimeTooSkewed) when calling the PutObject operation: The difference between the request time and the current time is too large.
+[2025-09-26T01:05:05.079+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=hw1, task_id=train_model, run_id=scheduled__2025-09-25T00:00:00+00:00, execution_date=20250925T000000, start_date=20250926T003219, end_date=20250926T010505
+[2025-09-26T01:05:05.115+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 229 for task train_model (An error occurred (RequestTimeTooSkewed) when calling the PutObject operation: The difference between the request time and the current time is too large.; 99365)
+[2025-09-26T01:05:05.157+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-09-26T01:05:05.175+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-26T01:05:05.178+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

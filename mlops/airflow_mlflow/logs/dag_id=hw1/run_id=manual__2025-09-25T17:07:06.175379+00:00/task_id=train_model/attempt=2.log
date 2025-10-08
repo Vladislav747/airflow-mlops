@@ -1,0 +1,40 @@
+[2025-09-25T17:12:40.052+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T17:12:40.058+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.train_model manual__2025-09-25T17:07:06.175379+00:00 [queued]>
+[2025-09-25T17:12:40.060+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.train_model manual__2025-09-25T17:07:06.175379+00:00 [queued]>
+[2025-09-25T17:12:40.060+0000] {taskinstance.py:2306} INFO - Starting attempt 2 of 2
+[2025-09-25T17:12:40.065+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_model> on 2025-09-25 17:07:06.175379+00:00
+[2025-09-25T17:12:40.069+0000] {standard_task_runner.py:64} INFO - Started process 45474 to run task
+[2025-09-25T17:12:40.071+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'train_model', 'manual__2025-09-25T17:07:06.175379+00:00', '--job-id', '59', '--raw', '--subdir', 'DAGS_FOLDER/kudryakov_hw1.py', '--cfg-path', '/tmp/tmpz_d_g_2q']
+[2025-09-25T17:12:40.074+0000] {standard_task_runner.py:91} INFO - Job 59: Subtask train_model
+[2025-09-25T17:12:40.093+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.train_model manual__2025-09-25T17:07:06.175379+00:00 [running]> on host 2b301b74205f
+[2025-09-25T17:12:40.126+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T17:07:06.175379+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T17:07:06.175379+00:00'
+[2025-09-25T17:12:40.126+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T17:12:40.132+0000] {kudryakov_hw1.py:186} INFO - Начали обучение модели
+[2025-09-25T17:12:40.132+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket mlops-webinar-web with path 2025/processed_data/titanic/titanic_x_train.pkl
+[2025-09-25T17:12:40.136+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2025-09-25T17:12:40.136+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2025-09-25T17:12:42.674+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket mlops-webinar-web with path 2025/processed_data/titanic/titanic_x_test.pkl
+[2025-09-25T17:12:44.578+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket mlops-webinar-web with path 2025/processed_data/titanic/titanic_y_train.pkl
+[2025-09-25T17:12:45.870+0000] {s3.py:1422} INFO - Downloading source S3 file from Bucket mlops-webinar-web with path 2025/processed_data/titanic/titanic_y_test.pkl
+[2025-09-25T17:12:49.799+0000] {kudryakov_hw1.py:207} INFO - Закончили обучение модели
+[2025-09-25T17:12:49.802+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T17:12:49.803+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/kudryakov_hw1.py", line 210, in train_model
+    model.to_pickle(filebuffer)
+AttributeError: 'LinearRegression' object has no attribute 'to_pickle'
+[2025-09-25T17:12:49.818+0000] {taskinstance.py:1206} INFO - Marking task as FAILED. dag_id=hw1, task_id=train_model, run_id=manual__2025-09-25T17:07:06.175379+00:00, execution_date=20250925T170706, start_date=20250925T171240, end_date=20250925T171249
+[2025-09-25T17:12:49.835+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 59 for task train_model ('LinearRegression' object has no attribute 'to_pickle'; 45474)
+[2025-09-25T17:12:49.860+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-09-25T17:12:49.873+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T17:12:49.873+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

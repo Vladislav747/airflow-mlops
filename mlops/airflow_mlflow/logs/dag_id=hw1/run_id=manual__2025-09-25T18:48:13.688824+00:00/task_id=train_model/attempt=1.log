@@ -1,0 +1,38 @@
+[2025-09-25T18:48:25.758+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T18:48:25.764+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.train_model manual__2025-09-25T18:48:13.688824+00:00 [queued]>
+[2025-09-25T18:48:25.767+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.train_model manual__2025-09-25T18:48:13.688824+00:00 [queued]>
+[2025-09-25T18:48:25.768+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-25T18:48:25.773+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): train_model> on 2025-09-25 18:48:13.688824+00:00
+[2025-09-25T18:48:25.776+0000] {standard_task_runner.py:64} INFO - Started process 57451 to run task
+[2025-09-25T18:48:25.778+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'train_model', 'manual__2025-09-25T18:48:13.688824+00:00', '--job-id', '96', '--raw', '--subdir', 'DAGS_FOLDER/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py', '--cfg-path', '/tmp/tmpt4df4m7k']
+[2025-09-25T18:48:25.779+0000] {standard_task_runner.py:91} INFO - Job 96: Subtask train_model
+[2025-09-25T18:48:25.798+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.train_model manual__2025-09-25T18:48:13.688824+00:00 [running]> on host 2b301b74205f
+[2025-09-25T18:48:25.835+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='train_model' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T18:48:13.688824+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T18:48:13.688824+00:00'
+[2025-09-25T18:48:25.836+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T18:48:25.841+0000] {kudryakov_hw1-checkpoint.py:159} INFO - Начали обучение модели start-ts 2025-09-25T18:48:25.841171
+[2025-09-25T18:48:25.845+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2025-09-25T18:48:25.845+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2025-09-25T18:48:30.925+0000] {kudryakov_hw1-checkpoint.py:174} INFO - Закончили обучение модели end-ts 2025-09-25T18:48:30.925007
+[2025-09-25T18:48:31.451+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T18:48:31.454+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py", line 186, in train_model
+    s3_write_csv(s3_hook, S3_BUCKET, y_pred, "2025/processed_data/titanic/titanic_y_pred.csv")
+  File "/opt/airflow/dags/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py", line 47, in s3_write_csv
+    df.to_csv(buf, index=False)
+AttributeError: 'str' object has no attribute 'to_csv'
+[2025-09-25T18:48:31.471+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=hw1, task_id=train_model, run_id=manual__2025-09-25T18:48:13.688824+00:00, execution_date=20250925T184813, start_date=20250925T184825, end_date=20250925T184831
+[2025-09-25T18:48:31.483+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 96 for task train_model ('str' object has no attribute 'to_csv'; 57451)
+[2025-09-25T18:48:31.508+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-09-25T18:48:31.525+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T18:48:31.526+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

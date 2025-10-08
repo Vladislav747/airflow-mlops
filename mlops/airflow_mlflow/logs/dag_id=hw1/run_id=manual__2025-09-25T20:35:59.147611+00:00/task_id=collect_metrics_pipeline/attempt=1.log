@@ -1,0 +1,42 @@
+[2025-09-25T20:36:21.809+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T20:36:21.816+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T20:35:59.147611+00:00 [queued]>
+[2025-09-25T20:36:21.820+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T20:35:59.147611+00:00 [queued]>
+[2025-09-25T20:36:21.821+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-25T20:36:21.825+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): collect_metrics_pipeline> on 2025-09-25 20:35:59.147611+00:00
+[2025-09-25T20:36:21.830+0000] {standard_task_runner.py:64} INFO - Started process 73487 to run task
+[2025-09-25T20:36:21.832+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'collect_metrics_pipeline', 'manual__2025-09-25T20:35:59.147611+00:00', '--job-id', '183', '--raw', '--subdir', 'DAGS_FOLDER/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py', '--cfg-path', '/tmp/tmpydgcg73j']
+[2025-09-25T20:36:21.834+0000] {standard_task_runner.py:91} INFO - Job 183: Subtask collect_metrics_pipeline
+[2025-09-25T20:36:21.860+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T20:35:59.147611+00:00 [running]> on host 2b301b74205f
+[2025-09-25T20:36:21.895+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='collect_metrics_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T20:35:59.147611+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T20:35:59.147611+00:00'
+[2025-09-25T20:36:21.895+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T20:36:21.904+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T20:36:21.904+0000] {taskinstance.py:2905} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 465, in _execute_task
+    result = _execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/taskinstance.py", line 432, in _execute_callable
+    return execute_callable(context=context, **execute_callable_kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/baseoperator.py", line 401, in wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 235, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/operators/python.py", line 252, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py", line 238, in collect_metrics_pipeline
+    pipeline_start_dt = parse(context["ti"].xcom_pull(task_ids="init_pipeline_start", key="collect_metrics_start"))
+  File "/home/airflow/.local/lib/python3.10/site-packages/dateutil/parser/_parser.py", line 1368, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/dateutil/parser/_parser.py", line 640, in parse
+    res, skipped_tokens = self._parse(timestr, **kwargs)
+  File "/home/airflow/.local/lib/python3.10/site-packages/dateutil/parser/_parser.py", line 719, in _parse
+    l = _timelex.split(timestr)         # Splits the timestr into tokens
+  File "/home/airflow/.local/lib/python3.10/site-packages/dateutil/parser/_parser.py", line 201, in split
+    return list(cls(s))
+  File "/home/airflow/.local/lib/python3.10/site-packages/dateutil/parser/_parser.py", line 69, in __init__
+    raise TypeError('Parser must be a string or character stream, not '
+TypeError: Parser must be a string or character stream, not NoneType
+[2025-09-25T20:36:21.909+0000] {taskinstance.py:1206} INFO - Marking task as UP_FOR_RETRY. dag_id=hw1, task_id=collect_metrics_pipeline, run_id=manual__2025-09-25T20:35:59.147611+00:00, execution_date=20250925T203559, start_date=20250925T203621, end_date=20250925T203621
+[2025-09-25T20:36:21.913+0000] {standard_task_runner.py:110} ERROR - Failed to execute job 183 for task collect_metrics_pipeline (Parser must be a string or character stream, not NoneType; 73487)
+[2025-09-25T20:36:21.932+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 1
+[2025-09-25T20:36:21.939+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T20:36:21.939+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

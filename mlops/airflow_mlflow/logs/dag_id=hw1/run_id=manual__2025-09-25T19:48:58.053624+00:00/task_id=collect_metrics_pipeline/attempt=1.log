@@ -1,0 +1,18 @@
+[2025-09-25T19:54:34.583+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T19:54:34.592+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T19:48:58.053624+00:00 [queued]>
+[2025-09-25T19:54:34.596+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T19:48:58.053624+00:00 [queued]>
+[2025-09-25T19:54:34.596+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-25T19:54:34.602+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): collect_metrics_pipeline> on 2025-09-25 19:48:58.053624+00:00
+[2025-09-25T19:54:34.606+0000] {standard_task_runner.py:64} INFO - Started process 67670 to run task
+[2025-09-25T19:54:34.609+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'collect_metrics_pipeline', 'manual__2025-09-25T19:48:58.053624+00:00', '--job-id', '146', '--raw', '--subdir', 'DAGS_FOLDER/kudryakov_hw1.py', '--cfg-path', '/tmp/tmp7pakg1cd']
+[2025-09-25T19:54:34.611+0000] {standard_task_runner.py:91} INFO - Job 146: Subtask collect_metrics_pipeline
+[2025-09-25T19:54:34.630+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T19:48:58.053624+00:00 [running]> on host 2b301b74205f
+[2025-09-25T19:54:34.664+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='collect_metrics_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T19:48:58.053624+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T19:48:58.053624+00:00'
+[2025-09-25T19:54:34.665+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T19:54:34.670+0000] {logging_mixin.py:188} INFO - collect_metrics_pipeline
+[2025-09-25T19:54:34.671+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-09-25T19:54:34.671+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T19:54:34.674+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hw1, task_id=collect_metrics_pipeline, run_id=manual__2025-09-25T19:48:58.053624+00:00, execution_date=20250925T194858, start_date=20250925T195434, end_date=20250925T195434
+[2025-09-25T19:54:34.711+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-09-25T19:54:34.718+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T19:54:34.718+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

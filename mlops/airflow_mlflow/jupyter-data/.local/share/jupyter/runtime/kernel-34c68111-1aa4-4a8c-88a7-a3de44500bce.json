@@ -1,0 +1,13 @@
+{
+  "shell_port": 39509,
+  "iopub_port": 48849,
+  "stdin_port": 47331,
+  "control_port": 37323,
+  "hb_port": 53931,
+  "ip": "127.0.0.1",
+  "key": "d2e5d8ef-1f3977c5b8532d662c7fb7b7",
+  "transport": "tcp",
+  "signature_scheme": "hmac-sha256",
+  "kernel_name": "python3",
+  "jupyter_session": "/home/jovyan/dags/mlflow/Untitled.ipynb"
+}

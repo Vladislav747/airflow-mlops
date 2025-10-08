@@ -1,0 +1,20 @@
+[2025-09-25T20:22:40.425+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T20:22:40.431+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T20:22:17.764193+00:00 [queued]>
+[2025-09-25T20:22:40.435+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T20:22:17.764193+00:00 [queued]>
+[2025-09-25T20:22:40.435+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 2
+[2025-09-25T20:22:40.440+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): collect_metrics_pipeline> on 2025-09-25 20:22:17.764193+00:00
+[2025-09-25T20:22:40.443+0000] {standard_task_runner.py:64} INFO - Started process 71473 to run task
+[2025-09-25T20:22:40.446+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'hw1', 'collect_metrics_pipeline', 'manual__2025-09-25T20:22:17.764193+00:00', '--job-id', '175', '--raw', '--subdir', 'DAGS_FOLDER/.ipynb_checkpoints/kudryakov_hw1-checkpoint.py', '--cfg-path', '/tmp/tmpe0r0u8q4']
+[2025-09-25T20:22:40.447+0000] {standard_task_runner.py:91} INFO - Job 175: Subtask collect_metrics_pipeline
+[2025-09-25T20:22:40.468+0000] {task_command.py:426} INFO - Running <TaskInstance: hw1.collect_metrics_pipeline manual__2025-09-25T20:22:17.764193+00:00 [running]> on host 2b301b74205f
+[2025-09-25T20:22:40.503+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='VLADISLAV KUDRYAKOV' AIRFLOW_CTX_DAG_ID='hw1' AIRFLOW_CTX_TASK_ID='collect_metrics_pipeline' AIRFLOW_CTX_EXECUTION_DATE='2025-09-25T20:22:17.764193+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2025-09-25T20:22:17.764193+00:00'
+[2025-09-25T20:22:40.504+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T20:22:40.517+0000] {logging_mixin.py:188} INFO - {'collect_metrics_start': '2025-09-25T20:22:34.829301', 'collect_metrics_end': '2025-09-25T20:22:38.904182', 'author': 'VLADISLAV KUDRYAKOV', 'dag_id': 'hw1', 'run_id': 'manual__2025-09-25T20:22:17.764193+00:00'} pipeline_metrics
+[2025-09-25T20:22:40.520+0000] {base.py:84} INFO - Using connection ID 's3_connection' for task execution.
+[2025-09-25T20:22:40.520+0000] {connection_wrapper.py:388} INFO - AWS Connection (conn_id='s3_connection', conn_type='aws') credentials retrieved from login and password.
+[2025-09-25T20:22:41.316+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-09-25T20:22:41.316+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T20:22:41.331+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=hw1, task_id=collect_metrics_pipeline, run_id=manual__2025-09-25T20:22:17.764193+00:00, execution_date=20250925T202217, start_date=20250925T202240, end_date=20250925T202241
+[2025-09-25T20:22:41.388+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-09-25T20:22:41.406+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T20:22:41.407+0000] {local_task_job_runner.py:222} INFO - ::endgroup::

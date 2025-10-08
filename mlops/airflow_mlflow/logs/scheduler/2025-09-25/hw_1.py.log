@@ -1,0 +1,255 @@
+[2025-09-25T12:20:41.063+0000] {processor.py:161} INFO - Started process (PID=14077) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:20:41.064+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:20:41.065+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:20:41.065+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:20:41.068+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:20:41.068+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:20:41.069+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:20:41.081+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.024 seconds
+[2025-09-25T12:21:11.684+0000] {processor.py:161} INFO - Started process (PID=14118) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:21:11.685+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:21:11.686+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:21:11.686+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:21:11.689+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:21:11.689+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:21:11.690+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:21:11.703+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.025 seconds
+[2025-09-25T12:21:42.276+0000] {processor.py:161} INFO - Started process (PID=14159) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:21:42.277+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:21:42.279+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:21:42.279+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:21:42.283+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:21:42.282+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:21:42.283+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:21:42.295+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.026 seconds
+[2025-09-25T12:22:12.852+0000] {processor.py:161} INFO - Started process (PID=14200) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:22:12.853+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:22:12.855+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:22:12.855+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:22:12.859+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:22:12.859+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:22:12.860+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:22:12.872+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.026 seconds
+[2025-09-25T12:22:43.453+0000] {processor.py:161} INFO - Started process (PID=14241) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:22:43.455+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:22:43.457+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:22:43.456+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:22:43.461+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:22:43.460+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:22:43.461+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:22:43.475+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.028 seconds
+[2025-09-25T12:23:14.083+0000] {processor.py:161} INFO - Started process (PID=14282) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:14.084+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:23:14.087+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:23:14.086+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:14.091+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:23:14.090+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:23:14.091+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:14.106+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.031 seconds
+[2025-09-25T12:23:44.763+0000] {processor.py:161} INFO - Started process (PID=14323) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:44.764+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:23:44.765+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:23:44.765+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:44.769+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:23:44.769+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:23:44.770+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:44.783+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.027 seconds
+[2025-09-25T12:23:55.896+0000] {processor.py:161} INFO - Started process (PID=14334) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:55.897+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:23:55.898+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:23:55.898+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:55.903+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:23:55.902+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:23:55.903+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:23:55.917+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.027 seconds
+[2025-09-25T12:24:26.434+0000] {processor.py:161} INFO - Started process (PID=14375) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:24:26.435+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:24:26.436+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:24:26.436+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:24:26.440+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:24:26.440+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:24:26.441+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:24:26.453+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.027 seconds
+[2025-09-25T12:24:57.092+0000] {processor.py:161} INFO - Started process (PID=14416) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:24:57.093+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:24:57.095+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:24:57.095+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:24:57.098+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:24:57.097+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:24:57.098+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:24:57.115+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.027 seconds
+[2025-09-25T12:25:27.670+0000] {processor.py:161} INFO - Started process (PID=14457) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:25:27.671+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:25:27.673+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:25:27.672+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:25:27.676+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:25:27.676+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:25:27.677+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:25:27.690+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.027 seconds
+[2025-09-25T12:25:58.272+0000] {processor.py:161} INFO - Started process (PID=14498) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:25:58.273+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:25:58.276+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:25:58.276+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:25:58.280+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:25:58.280+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:25:58.281+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:25:58.294+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.033 seconds
+[2025-09-25T12:26:28.840+0000] {processor.py:161} INFO - Started process (PID=14539) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:26:28.841+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:26:28.843+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:26:28.842+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:26:28.846+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:26:28.846+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:26:28.847+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:26:28.862+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.030 seconds
+[2025-09-25T12:26:59.415+0000] {processor.py:161} INFO - Started process (PID=14580) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:26:59.416+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:26:59.418+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:26:59.418+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:26:59.423+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:26:59.422+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:26:59.423+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:26:59.440+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.032 seconds
+[2025-09-25T12:27:30.004+0000] {processor.py:161} INFO - Started process (PID=14621) to work on /opt/airflow/dags/hw_1.py
+[2025-09-25T12:27:30.005+0000] {processor.py:830} INFO - Processing file /opt/airflow/dags/hw_1.py for tasks to queue
+[2025-09-25T12:27:30.009+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:27:30.008+0000] {dagbag.py:545} INFO - Filling up the DagBag from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:27:30.012+0000] {logging_mixin.py:188} INFO - [2025-09-25T12:27:30.012+0000] {dagbag.py:355} ERROR - Failed to import: /opt/airflow/dags/hw_1.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.10/site-packages/airflow/models/dagbag.py", line 351, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 879, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 1017, in get_code
+  File "<frozen importlib._bootstrap_external>", line 947, in source_to_code
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/opt/airflow/dags/hw_1.py", line 61
+    def split_and_preprocess(**context):
+    ^^^
+IndentationError: expected an indented block after function definition on line 58
+[2025-09-25T12:27:30.013+0000] {processor.py:842} WARNING - No viable dags retrieved from /opt/airflow/dags/hw_1.py
+[2025-09-25T12:27:30.025+0000] {processor.py:183} INFO - Processing /opt/airflow/dags/hw_1.py took 0.026 seconds

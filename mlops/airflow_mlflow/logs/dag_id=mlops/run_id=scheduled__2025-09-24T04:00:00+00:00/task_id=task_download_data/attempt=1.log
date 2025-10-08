@@ -1,0 +1,17 @@
+[2025-09-25T04:00:29.160+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2025-09-25T04:00:29.174+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: mlops.task_download_data scheduled__2025-09-24T04:00:00+00:00 [queued]>
+[2025-09-25T04:00:29.177+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: mlops.task_download_data scheduled__2025-09-24T04:00:00+00:00 [queued]>
+[2025-09-25T04:00:29.177+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2025-09-25T04:00:29.181+0000] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): task_download_data> on 2025-09-24 04:00:00+00:00
+[2025-09-25T04:00:29.183+0000] {standard_task_runner.py:64} INFO - Started process 4936 to run task
+[2025-09-25T04:00:29.185+0000] {standard_task_runner.py:90} INFO - Running: ['***', 'tasks', 'run', 'mlops', 'task_download_data', 'scheduled__2025-09-24T04:00:00+00:00', '--job-id', '4', '--raw', '--subdir', 'DAGS_FOLDER/example.py', '--cfg-path', '/tmp/tmphyyoa8r2']
+[2025-09-25T04:00:29.186+0000] {standard_task_runner.py:91} INFO - Job 4: Subtask task_download_data
+[2025-09-25T04:00:29.213+0000] {task_command.py:426} INFO - Running <TaskInstance: mlops.task_download_data scheduled__2025-09-24T04:00:00+00:00 [running]> on host 2b301b74205f
+[2025-09-25T04:00:29.251+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_EMAIL='vvkudriakov@edu.hse.ru' AIRFLOW_CTX_DAG_OWNER='Vladislav Kudryakov' AIRFLOW_CTX_DAG_ID='mlops' AIRFLOW_CTX_TASK_ID='task_download_data' AIRFLOW_CTX_EXECUTION_DATE='2025-09-24T04:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-09-24T04:00:00+00:00'
+[2025-09-25T04:00:29.252+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2025-09-25T04:00:29.735+0000] {python.py:237} INFO - Done. Returned value was: None
+[2025-09-25T04:00:29.736+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2025-09-25T04:00:29.740+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=mlops, task_id=task_download_data, run_id=scheduled__2025-09-24T04:00:00+00:00, execution_date=20250924T040000, start_date=20250925T040029, end_date=20250925T040029
+[2025-09-25T04:00:29.799+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2025-09-25T04:00:29.809+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-09-25T04:00:29.810+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
