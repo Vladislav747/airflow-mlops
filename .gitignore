@@ -1,0 +1,4 @@
+.DS_Store
+mlops/.DS_Store
+mlops/airflow_mlflow/.DS_Store
+mlops/airflow_mlflow/logs
